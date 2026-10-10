@@ -148,6 +148,8 @@ def display_metric(title, candidates, fallback="—"):
 if page == "Resumen ejecutivo":
     st.subheader("Resumen ejecutivo")
     st.write("Vista rápida de los indicadores clave para identificar oportunidades de mejora.")
+
+    c1, c2, c3 = st.columns(3)
             
     with c1:
         display_metric("Tiempo promedio de atención", ["tiempo promedio", "tiempo de atención"])
@@ -156,6 +158,9 @@ if page == "Resumen ejecutivo":
     with c3:
         display_metric("Pedidos con errores", ["errores", "pedido con error"])
     c4, c5, c6 = st.columns(3)
+
+    c4, c5, c6 = st.columns(3)
+    
     with c4:
         display_metric("Cumplimiento correcto", ["cumplimiento correcto", "pedido correcto"])
     with c5:
