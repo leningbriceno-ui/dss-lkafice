@@ -12,16 +12,55 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-    .block-container {padding-top: 1.5rem; padding-bottom: 2rem;}
-    [data-testid="stMetric"] {
-        background: #ffffff;
-        border: 1px solid #e7eaf0;
-        padding: 16px 18px;
-        border-radius: 14px;
-        box-shadow: 0 2px 8px rgba(20,30,50,.04);
+    .stApp {
+        background-color: #101C2C;
+        color: #F8FAFC;
     }
-    [data-testid="stSidebar"] {background-color: #f5f7fa;}
-    h1, h2, h3 {letter-spacing: -0.02em;}
+
+    .block-container {
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+        max-width: 1500px;
+    }
+
+    [data-testid="stSidebar"] {
+        background-color: #17263A;
+        border-right: 1px solid #344357;
+    }
+
+    [data-testid="stSidebar"] * {
+        color: #F8FAFC;
+    }
+
+    [data-testid="stMetric"] {
+        background-color: #1C2B40;
+        border: 1px solid #344357;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    [data-testid="stMetricLabel"] {
+        color: #D0D9E5 !important;
+    }
+
+    [data-testid="stMetricValue"] {
+        color: #FFFFFF !important;
+        font-weight: 700;
+    }
+
+    h1, h2, h3 {
+        color: #FFFFFF;
+        letter-spacing: -0.02em;
+    }
+
+    hr {
+        border-color: #344357;
+    }
+
+    div[data-testid="stAlert"] {
+        border-radius: 12px;
+    }
 </style>
 """, unsafe_allow_html=True)
 
