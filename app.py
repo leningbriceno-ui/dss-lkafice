@@ -148,10 +148,6 @@ def display_metric(title, candidates, fallback="—"):
 if page == "Resumen ejecutivo":
     st.subheader("Resumen ejecutivo")
     st.write("Vista rápida de los indicadores clave para identificar oportunidades de mejora.")
-    
-        with st.expander("Revisar datos de los KPI"):
-        st.write("Columnas disponibles:", kpi.columns.tolist())
-        st.dataframe(kpi, use_container_width=True)
             
     with c1:
         display_metric("Tiempo promedio de atención", ["tiempo promedio", "tiempo de atención"])
