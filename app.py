@@ -184,16 +184,7 @@ if page == "Resumen ejecutivo":
             if not chart_df.empty:
                 fig = px.bar(chart_df, x="Indicador", y="Resultado numérico", text="Resultado",
                              color="Indicador", title="Resultados de los KPI")
-                fig.update_layout(
-                    template="plotly_dark",
-                    paper_bgcolor="#101C2C",
-                    plot_bgcolor="#101C2C",
-                    font=dict(color="#F8FAFC"),
-                    showlegend=False,
-                    xaxis_title="",
-                    yaxis_title="Resultado",
-                    margin=dict(l=10, r=10, t=55, b=10),
-                )
+                fig.update_layout(showlegend=False, xaxis_title="", yaxis_title="Resultado", margin=dict(l=10,r=10,t=55,b=10))
                 st.plotly_chart(fig, use_container_width=True)
             else:
                 st.dataframe(kpi, use_container_width=True, hide_index=True)
