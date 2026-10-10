@@ -1,0 +1,15 @@
+DSS L'KAFICE - plantilla inicial de Streamlit
+
+1. Descomprime esta carpeta.
+2. Coloca estos tres CSV en la misma carpeta que app.py:
+   - kpi_dss.csv
+   - diagnostico_dss.csv
+   - plan_accion_dss.csv
+3. Para probar localmente (opcional):
+   pip install -r requirements.txt
+   streamlit run app.py
+4. Para publicar en Streamlit Community Cloud:
+   sube app.py, requirements.txt y los tres CSV a un repositorio de GitHub.
+   Luego crea una app en Streamlit Community Cloud seleccionando ese repositorio y app.py.
+
+Nota: el panel indica que los datos son sintéticos y las metas son ilustrativas.
