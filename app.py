@@ -228,11 +228,26 @@ elif page == "Diagnóstico operativo":
         view = view[view[priority_col].astype(str) == selected_priority]
     st.dataframe(view, use_container_width=True, hide_index=True)
     if state_col:
-        st.markdown("#### Resumen de cumplimiento")
-        counts = diagnostico[state_col].fillna("Sin estado").astype(str).value_counts().reset_index()
+        st.markdown("### Resumen de cumplimiento")
+
+    if view.empty:
+        st.info("No hay indicadores para los filtros seleccionados.")
+    else:
+        counts = view[state_col].fillna("Sin estado").astype(str).value_counts().reset_index()
         counts.columns = ["Estado", "Cantidad"]
-        fig = px.bar(counts, x="Estado", y="Cantidad", text="Cantidad", color="Estado")
-        fig.update_layout(showlegend=False, xaxis_title="", yaxis_title="Número de indicadores")
+
+        fig = px.bar(
+            counts,
+            x="Estado",
+            y="Cantidad",
+            text="Cantidad",
+            color="Estado"
+        )
+        fig.update_layout(
+            showlegend=False,
+            xaxis_title="",
+            yaxis_title="Número de indicadores"
+        )
         st.plotly_chart(fig, use_container_width=True)
 
 elif page == "Plan de acción":
