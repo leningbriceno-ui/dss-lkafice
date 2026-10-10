@@ -147,6 +147,9 @@ def display_metric(title, candidates, fallback="—"):
 
 if page == "Resumen ejecutivo":
     st.subheader("Resumen ejecutivo")
+        with st.expander("Revisar datos de los KPI"):
+        st.write("Columnas disponibles:", kpi.columns.tolist())
+        st.dataframe(kpi, use_container_width=True)
     st.write("Vista rápida de los indicadores clave para identificar oportunidades de mejora.")
     c1, c2, c3 = st.columns(3)
     with c1:
