@@ -156,8 +156,6 @@ if page == "Resumen ejecutivo":
     with c2:
         display_metric("Pedidos demorados", ["demorados", "demora"])
     with c3:
-        display_metric("Pedidos con errores", ["errores", "pedido con error"])
-    c4, c5, c6 = st.columns(3)
 
     c4, c5, c6 = st.columns(3)
     
