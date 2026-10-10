@@ -162,7 +162,7 @@ if page == "Resumen ejecutivo":
     c4, c5, c6 = st.columns(3)
     
     with c4:
-        display_metric("Cumplimiento correcto", ["cumplimiento correcto", "pedido correcto"])
+        display_metric("Pedidos con errores", ["pedidos con error", "pedido con error", "errores"])
     with c5:
         display_metric("Desperdicio operativo", ["desperdicio"])
     with c6:
