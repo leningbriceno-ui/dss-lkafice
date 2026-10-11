@@ -233,7 +233,7 @@ if page == "Resumen ejecutivo":
                 legend=dict(font=dict(color="#F8FAFC")),
             )
             fig.update_traces(textfont=dict(color="#FFFFFF"))
-(counts, names="Estado", values="Cantidad", hole=0.55, title="Indicadores por estado")
+fig = px.pie(counts, names="Estado", values="Cantidad", hole=0.55, title="Indicadores por estado")
             fig.update_layout(margin=dict(l=10,r=10,t=55,b=10), legend_title="")
             st.plotly_chart(fig, use_container_width=True)
         else:
