@@ -278,10 +278,6 @@ elif page == "Diagnóstico operativo":
                 cliponaxis=False,
                 textfont=dict(color="#F8FAFC"),
             )
-            fig.update_layout(
-                xaxis_title="",
-                axis_title="Número de indicadores",
-            )
             st.plotly_chart(fig, use_container_width=True)
         else:
             st.info(
