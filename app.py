@@ -129,21 +129,37 @@ def metric_value(label_candidates):
 
 def display_metric(title, candidates, fallback="—"):
     result = metric_value(candidates)
+
     if result is None:
         st.metric(title, fallback)
         return
+
     value, unit = result
+
     try:
-        number = float(str(value).replace("%", "").replace(",", "."))
-        # Results exported as percentages may be either 15.2 or 0.152.
-        formatted = f"{number:.2f}"
-        if "%" in unit or "porcentaje" in unit.casefold():
-            formatted += "%"
+        number = float(
+            str(value).replace("%", "").replace(",", ".")
+        )
+
+        is_productivity = "productividad" in title.casefold()
+
+        if is_productivity:
+            formatted = f"{number:.0f} pedidos"
+        elif "%" in unit or "porcentaje" in unit.casefold():
+            formatted = f"{number:.2f}%"
         elif unit and unit.casefold() not in ("nan", "none"):
-            formatted += f" {unit}"
+            formatted = f"{number:.2f} {unit}"
+        else:
+            formatted = f"{number:.2f}"
+
     except (TypeError, ValueError):
         formatted = str(value)
+        is_productivity = "productividad" in title.casefold()
+
     st.metric(title, formatted)
+
+    if is_productivity:
+        st.caption("Por trabajador/día")
 
 if page == "Resumen ejecutivo":
     st.subheader("Resumen ejecutivo")
