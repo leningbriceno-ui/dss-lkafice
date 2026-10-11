@@ -244,7 +244,7 @@ elif page == "Diagnóstico operativo":
         view = view[view[state_col].astype(str) == selected_state]
     if priority_col and selected_priority != "Todas":
         view = view[view[priority_col].astype(str) == selected_priority]
-            if view.empty:
+    if view.empty:
                 st.info("No hay indicadores para los filtros seleccionados.")
             else:
                 st.dataframe(view, use_container_width=True, hide_index=True)
