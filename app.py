@@ -27,6 +27,23 @@ st.markdown("""
     div[data-testid="stAlert"] { border-radius: 12px; }
     div[data-testid="stDataFrame"] { border: 1px solid #344357; border-radius: 10px; overflow: hidden; }
     div.stDownloadButton > button { border: 1px solid #D9B568; border-radius: 10px; }
+/* Igualar la barra superior con el fondo de la aplicación */
+.stAppHeader,
+header[data-testid="stHeader"] {
+    background-color: #101C2C !important;
+    background: #101C2C !important;
+    border-bottom: none !important;
+}
+
+/* Mantener la barra de herramientas integrada al diseño */
+[data-testid="stToolbar"] {
+    background-color: #101C2C !important;
+}
+
+/* Evitar que aparezca una franja blanca al desplazarse */
+.stApp {
+    background-color: #101C2C !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
