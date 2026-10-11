@@ -44,6 +44,25 @@ header[data-testid="stHeader"] {
 .stApp {
     background-color: #101C2C !important;
 }
+
+/* Mejorar contraste del botón de descarga CSV */
+div[data-testid="stDownloadButton"] button {
+    background-color: #D9B568 !important;
+    color: #101C2C !important;
+    border: 1px solid #D9B568 !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+}
+
+div[data-testid="stDownloadButton"] button p {
+    color: #101C2C !important;
+    font-weight: 700 !important;
+}
+
+div[data-testid="stDownloadButton"] button:hover {
+    background-color: #C6A04E !important;
+    border-color: #C6A04E !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
