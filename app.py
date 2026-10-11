@@ -245,49 +245,49 @@ elif page == "Diagnóstico operativo":
     if priority_col and selected_priority != "Todas":
         view = view[view[priority_col].astype(str) == selected_priority]
     if view.empty:
-                st.info("No hay indicadores para los filtros seleccionados.")
-            else:
-                st.dataframe(view, use_container_width=True, hide_index=True)
+       st.info("No hay indicadores para los filtros seleccionados.")
+    else:
+        st.dataframe(view, use_container_width=True, hide_index=True)
 
-                if state_col:
-                    st.markdown("### Resumen de cumplimiento")
-                    counts = (
-                        view[state_col].fillna("Sin estado").astype(str)
-                        .value_counts()
-                        .rename_axis("Estado")
-                        .reset_index(name="Cantidad")
-                    )
-                    fig = px.bar(
-                        counts,
-                        x="Estado",
-                        y="Cantidad",
-                        text="Cantidad",
-                        color="Estado",
-                        title="Indicadores según estado",
-                        color_discrete_map={
-                            "CUMPLE": "#2CB67D",
-                            "NO CUMPLE": "#F08A78",
-                        },
-                        color_discrete_sequence=[
-                            "#D9B568", "#F08A78", "#6CB6FF"
-                        ],
-                    )
-                    apply_dark_chart_style(fig, show_legend=False)
-                    fig.update_traces(
-                        textposition="outside",
-                        cliponaxis=False,
-                        textfont=dict(color="#F8FAFC"),
-                    )
-                    fig.update_layout(
-                        xaxis_title="",
-                        yaxis_title="Número de indicadores",
-                    )
-                    st.plotly_chart(fig, use_container_width=True)
-                else:
-                    st.info(
-                        "No se encontró la columna 'Estado' "
-                        "en el archivo de diagnóstico."
-                    )
+        if state_col:
+            st.markdown("### Resumen de cumplimiento")
+            counts = (
+                view[state_col].fillna("Sin estado").astype(str)
+                .value_counts()
+                .rename_axis("Estado")
+                .reset_index(name="Cantidad")
+            )
+            fig = px.bar(
+                counts,
+                x="Estado",
+                y="Cantidad",
+                text="Cantidad",
+                color="Estado",
+                title="Indicadores según estado",
+                color_discrete_map={
+                    "CUMPLE": "#2CB67D",
+                    "NO CUMPLE": "#F08A78",
+                },
+                color_discrete_sequence=[
+                    "#D9B568", "#F08A78", "#6CB6FF"
+                ],
+            )
+            apply_dark_chart_style(fig, show_legend=False)
+            fig.update_traces(
+                textposition="outside",
+                cliponaxis=False,
+                textfont=dict(color="#F8FAFC"),
+            )
+            fig.update_layout(
+                xaxis_title="",
+                axis_title="Número de indicadores",
+            )
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info(
+                "No se encontró la columna 'Estado' "
+                "en el archivo de diagnóstico."
+            )
 
 elif page == "Plan de acción":
     st.subheader("Plan de acción")
