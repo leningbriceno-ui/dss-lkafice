@@ -141,6 +141,7 @@ def apply_dark_chart_style(fig, show_legend=True):
         paper_bgcolor="#101C2C",
         plot_bgcolor="#101C2C",
         font=dict(color="#F8FAFC"),
+        title_font=dict(color="#F8FAFC", size=18),
         showlegend=show_legend,
         margin=dict(l=12, r=12, t=55, b=12),
         legend=dict(font=dict(color="#F8FAFC")),
