@@ -1,7 +1,0 @@
-﻿Indicador,Valor,Unidad,Meta,Cumple,Problema,Accion,Estado,Desviacion_pct,Prioridad,Herramienta_Lean
-Pedidos con error,3.9,%,Menos de 2 %,False,Proporción elevada de pedidos con error,Estandarizar la toma y verificación de pedidos,NO CUMPLE,95.0,Alta,Trabajo estandarizado y lista de verificación
-Pedidos demorados,15.2,%,Menos de 8 %,False,Proporción elevada de pedidos demorados,Analizar cuellos de botella y tiempos de espera,NO CUMPLE,90.0,Alta,Mapeo del flujo de valor (VSM) y análisis de cuellos de botella
-Desperdicio operativo,9.97,%,Menos de 6 %,False,Desperdicio operativo superior a la meta,Medir mermas y revisar el uso de insumos,NO CUMPLE,66.17,Alta,Análisis de desperdicios Lean y 5S
-Tiempo promedio de atención,9.44,minutos,Entre 6 y 8 minutos,False,Tiempo de atención fuera del rango objetivo,Analizar el flujo del pedido y localizar esperas,NO CUMPLE,18.0,Baja,Estudio de tiempos y análisis de procesos
-Cumplimiento correcto,96.1,%,Al menos 98 %,False,Cumplimiento de pedidos inferior a la meta,Incorporar una verificación antes de entregar,NO CUMPLE,1.94,Baja,Control de calidad en el proceso y Poka-Yoke
-Productividad diaria de prueba,40.0,pedidos/trabajador/día,Al menos 25 pedidos por trabajador/día,True,Indicador dentro de la meta,Mantener el seguimiento del indicador,CUMPLE,0.0,Seguimiento,Balanceo de tareas y análisis de carga de trabajo
