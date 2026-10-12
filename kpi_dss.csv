@@ -1,0 +1,7 @@
+﻿Indicador,Resultado,Unidad,Meta,Cumple
+Tiempo promedio de atención,9.51,minutos,Entre 6 y 8 minutos,False
+Pedidos demorados,15.3,%,Menos de 8 %,False
+Pedidos con error,3.8,%,Menos de 2 %,False
+Cumplimiento correcto,96.2,%,Igual o superior a 98 %,False
+Desperdicio operativo,9.83,%,Menos de 6 %,False
+Productividad diaria,39.79,pedidos por trabajador/día,Igual o superior a 25 pedidos,True
