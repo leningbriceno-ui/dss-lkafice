@@ -1,0 +1,7 @@
+﻿Indicador,Resultado,Unidad,Meta,Cumple,Problema,Accion,Estado,Desviacion_pct,Prioridad
+Tiempo promedio de atención,9.51,minutos,Entre 6 y 8 minutos,False,Tiempo de atención fuera del rango objetivo,Analizar el flujo del pedido y localizar esperas,NO CUMPLE,18.87,Media
+Pedidos demorados,15.3,%,Menos de 8 %,False,Proporción elevada de pedidos demorados,Analizar los cuellos de botella y reducir los tiempos de espera,NO CUMPLE,91.25,Alta
+Pedidos con error,3.8,%,Menos de 2 %,False,Proporción elevada de pedidos con error,Estandarizar la toma y verificación del pedido antes de entregarlo,NO CUMPLE,90.0,Alta
+Cumplimiento correcto,96.2,%,Igual o superior a 98 %,False,Cumplimiento de pedidos por debajo de la meta,Implementar una verificación final del pedido antes de la entrega,NO CUMPLE,1.84,Media
+Desperdicio operativo,9.83,%,Menos de 6 %,False,Desperdicio operativo superior a la meta,Medir las mermas e identificar las principales fuentes de desperdicio,NO CUMPLE,63.83,Alta
+Productividad diaria,39.79,pedidos por trabajador/día,Igual o superior a 25 pedidos,True,Productividad igual o superior a la meta,Revisar la distribución de tareas y balancear la carga de trabajo,CUMPLE,0.0,Baja
