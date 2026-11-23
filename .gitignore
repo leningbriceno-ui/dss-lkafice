@@ -1,0 +1,14 @@
+# Evidencias reales o privadas: nunca publicar
+ventas_reales_octubre_2026.csv
+*ventas_reales*.csv
+*ventas_reales*.xlsx
+InformeVentas*
+*Evidencias*.zip
+*Validacion*.ipynb
+*Validacion*.zip
+*_privado*
+.streamlit/secrets.toml
+.env
+__pycache__/
+*.pyc
+.DS_Store
